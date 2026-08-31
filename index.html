@@ -29,10 +29,19 @@
       <a href="#contact"  data-i18n="nav.contact">Contact</a>
     </nav>
     <div class="header-tools">
-      <div class="lang" role="group" aria-label="Language">
-        <button data-lang="fr" class="is-active" aria-pressed="true">FR</button>
-        <button data-lang="en" aria-pressed="false">EN</button>
-        <button data-lang="zh" aria-pressed="false" lang="zh">中文</button>
+      <div class="lang" id="lang">
+        <button type="button" class="lang-btn" id="langBtn" aria-haspopup="listbox" aria-expanded="false" aria-label="Choose language / Choisir la langue">
+          <svg class="lang-globe" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a15 15 0 0 1 0 18 15 15 0 0 1 0-18Z"/></svg>
+          <span class="lang-code" id="langCode">FR</span>
+          <svg class="lang-caret" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+        </button>
+        <ul class="lang-menu" id="langMenu" role="listbox" aria-label="Language">
+          <li><button type="button" role="option" data-lang="fr" lang="fr">Français</button></li>
+          <li><button type="button" role="option" data-lang="en" lang="en">English</button></li>
+          <li><button type="button" role="option" data-lang="es" lang="es">Español</button></li>
+          <li><button type="button" role="option" data-lang="sw" lang="sw">Kiswahili</button></li>
+          <li><button type="button" role="option" data-lang="zh" lang="zh">中文</button></li>
+        </ul>
       </div>
       <a href="#contact" class="btn btn--brand header-cta" data-i18n="nav.cta">Nous contacter</a>
       <button class="burger" id="burger" aria-label="Menu" aria-expanded="false"><span></span></button>

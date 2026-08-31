@@ -1,6 +1,6 @@
 # MBI — Mining Business Integration
 
-Static trilingual (FR/EN/ZH) website for MBI. Plain HTML, CSS and
+Static multilingual (FR/EN/ES/SW/ZH) website for MBI. Plain HTML, CSS and
 JavaScript. No build step, no dependencies. Open `index.html` in a
 browser and it runs.
 
@@ -18,11 +18,15 @@ mbi/
 
 ## Language toggle
 
-- FR is the default. The choice is saved in the browser (localStorage)
+- Five languages: `fr`, `en`, `es`, `sw` (Kiswahili) and `zh` (中文).
+  FR is the default. The choice is saved in the browser (localStorage)
   so returning visitors keep their language.
+- The toggle is a single folded menu in the header (globe + current
+  code); the list of languages lives in the `LANGS` array at the top
+  of `assets/js/script.js`.
 - All copy lives in the `I18N` dictionary in `assets/js/script.js`.
-  Each entry has `fr`, `en` and `zh` (中文). Edit text there, in one
-  place, and both the page and the `<meta description>` update.
+  Each entry has a key per language. Edit text there, in one place,
+  and both the page and the `<meta description>` update.
 
 ## Contact form
 

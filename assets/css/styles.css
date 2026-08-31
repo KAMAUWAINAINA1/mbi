@@ -115,14 +115,37 @@ p{ max-width:72ch }
 
 .header-tools{ display:flex; align-items:center; gap:14px; margin-left:8px }
 
-/* language toggle */
-.lang{ display:inline-flex; border:1.5px solid var(--line); border-radius:999px; overflow:hidden; background:var(--white) }
-.lang button{
-  border:0; background:transparent; padding:.42em .72em; font-size:.82rem; font-weight:700;
-  letter-spacing:.03em; color:var(--stone); transition:background .2s, color .2s; cursor:pointer;
+/* language toggle — folded into a single menu */
+.lang{ position:relative; flex:0 0 auto }
+.lang-btn{
+  display:inline-flex; align-items:center; gap:6px;
+  border:1.5px solid var(--line); border-radius:999px; background:var(--white);
+  padding:.4em .58em .4em .66em; font-size:.82rem; font-weight:700; letter-spacing:.03em;
+  color:var(--ink); transition:border-color .2s, color .2s;
 }
-.lang button + button{ border-left:1.5px solid var(--line) }
-.lang button.is-active{ background:var(--brand); color:#fff; border-color:var(--brand) }
+.lang-btn:hover{ border-color:var(--brand); color:var(--brand-ink) }
+.lang-globe{ width:15px; height:15px; fill:none; stroke:currentColor; stroke-width:1.6 }
+.lang-caret{ width:12px; height:12px; fill:none; stroke:currentColor; stroke-width:2.4; transition:transform .25s var(--ease) }
+.lang-btn[aria-expanded="true"] .lang-caret{ transform:rotate(180deg) }
+.lang-code{ min-width:1.7em; text-align:center }
+
+.lang-menu{
+  position:absolute; top:calc(100% + 8px); right:0; z-index:70;
+  min-width:154px; padding:6px; margin:0; list-style:none;
+  background:var(--white); border:1.5px solid var(--line); border-radius:var(--r-md);
+  box-shadow:0 20px 44px -22px rgba(16,38,60,.5);
+  display:flex; flex-direction:column; gap:2px;
+  opacity:0; transform:translateY(-6px); pointer-events:none;
+  transition:opacity .18s var(--ease), transform .18s var(--ease);
+}
+.lang.is-open .lang-menu{ opacity:1; transform:none; pointer-events:auto }
+.lang-menu button{
+  width:100%; text-align:left; border:0; background:transparent;
+  padding:.52em .7em; border-radius:var(--r-sm); font-size:.9rem; font-weight:600;
+  color:var(--ink); transition:background .15s, color .15s;
+}
+.lang-menu button:hover{ background:var(--stone-50); color:var(--brand-ink) }
+.lang-menu button.is-active{ background:var(--brand); color:#fff }
 
 .header-cta{ display:inline-flex }
 
