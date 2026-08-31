@@ -49,11 +49,13 @@ Contact/footer links in `index.html`.
 
 ## Notes on assets
 
-- The logo, team headshots and the mining/handshake photos were
-  rebuilt from the screenshots of the current site, so they sit at
-  screenshot resolution. If you have the original high-res files
-  (logo as PNG/SVG, team photos, site photography), drop them into
-  `assets/img/` under the same names for a sharper result.
+- The logo (`mbi-logo.png`), favicon and apple-touch icon are cut
+  from the supplied MBI gear logo with the grey background removed
+  (transparent PNG). `team-mahamar.jpg` is the supplied headshot.
+- The mining/handshake photos and `team-moussa.jpg` were rebuilt
+  from screenshots of the current site, so they sit at screenshot
+  resolution. Drop higher-res files into `assets/img/` under the
+  same names for a sharper result.
 - Team = Mahamar Haidara and Moussa Makan Kanté (as on the current site).
 - One source typo was corrected: "activistes minières" → "activités
   minières" in the Location & operational solutions pillar.
